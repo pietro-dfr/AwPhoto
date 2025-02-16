@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>AwPhoto</title>
+  </head>
+  <body>
+    <header>
+      <span> <i class="fas fa-camera"></i> <a href="index.html">AwPhoto</a></span>
+      <nav>
+        <ul>
+          <li>
+            <form id="seo">
+              <input type="text" placeholder="Pesquise alguma imagem!" />
+            </form>
+          </li>
+          <li>
+            <a href="https://picsum.photos/1300/700" target="_blank">
+              <button>Aleatório</button>
+            </a>
+          </li>
+          <li>
+            <button id="moreBtn">Menu</button>
+          </li>
+          <li>
+            <button onclick="window.location.href='pages/sobre/Slider.html'">
+              Sobre
+            </button>
+          </li>
+          <li>
+            <a href="pages/login/login.html"><button>Entrar</button></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="moreModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeMoreModal()">&times;</span>
+        <div class="modal-header">Menu</div>
+        <div class="modal-body">
+          <ul>
+            <li>
+              <button onclick="window.location.href='pages/sobre/Slider.html'">
+                <i class="fas fa-info-circle"></i> Sobre
+              </button>
+            </li>
+            <li>
+              <button><i class="fas fa-search"></i>Pesquisar</button>
+            </li>
+            <li>
+              <button
+                onclick="window.location.href = 'https://picsum.photos/1300/700'"
+              >
+                <i class="fas fa-image"></i> Imagem aleatória
+              </button>
+            </li>
+            <li>
+              <button onclick="window.location.href = 'pages/login/login.html'">
+                <i class="fas fa-users"></i> Login
+              </button>
+            </li>
+            <li>
+              <button><i class="fas fa-sliders-h"></i> Avançado</button>
+            </li>
+            <li>
+              <button onclick="window.location.href='pages/config/tela de config.css.html'"><i class="fas fa-cogs"></i> Configurações</button>
+            </li>
+            <li>
+              <button onclick="window.location.href='pages/prices/prices.html'">
+                <i class="fa-solid fa-crown"></i> Premium
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <main>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/800/600');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/800/600')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/850/600');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/850/600')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/750/500');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/750/500')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/900/700');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/900/700')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/1100/800');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/1100/800')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/1000/600');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/1000/600')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/1200/800');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/1200/800')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/950/650');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/950/650')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/800/800');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/800/800')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/1000/900');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/1000/900')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/1100/1000');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/1100/1000')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/1050/750');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/1050/750')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/850/850');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/850/850')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/800/1200');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/800/1200')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/900/900');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/900/900')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/1200/1000');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/1200/1000')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/950/1100');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/950/1100')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/1000/1100');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/1000/1100')"
+      ></div>
+      <div
+        class="img-container"
+        style="
+          background-image: url('https://picsum.photos/1150/1000');
+          background-size: cover;
+          background-position: center;
+        "
+        onclick="openImagePopup('https://picsum.photos/1150/1000')"
+      ></div>
+    </main>
+    <div id="imagePopup" class="image-popup">
+      <span class="close-btn" onclick="closeImagePopup()"
+        ><i class="fa-solid fa-x"></i
+      ></span>
+      <div class="image-popup-content" id="image-popup-content">
+        <img id="popup-img" src="" alt="Imagem Modal" />
+
+        <div class="image-popup-buttons">
+          <button class="popup-btn" id="downloadBtn" onclick="downloadImage()">
+            <i class="fas fa-download"></i> Download
+          </button>
+          <button class="popup-btn" id="shareBtn" onclick="shareImage()">
+            <i class="fas fa-share-alt"></i> Compartilhar
+          </button>
+          <button class="popup-btn" id="likeBtn" onclick="toggleLike()">
+            <i class="fas fa-heart"></i> Like
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button class="load">Carregar mais imagens</button>
+    <script src="buttons.js"></script>
+  </body>
+</html>

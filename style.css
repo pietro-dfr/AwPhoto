@@ -1,0 +1,372 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  height: 9rem;
+  background-image: url("https://picsum.photos/1200/300/?blur");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+header span {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+header ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+.load,
+header button {
+  border: 0.17rem solid transparent;
+  padding: 0.5rem;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  transition: background-color 0.2s ease-in, transform 0.1s ease-in;
+}
+
+.load:hover,
+header button:hover {
+  cursor: pointer;
+  background-color: rgb(32, 32, 32);
+  border-color: white;
+  transform: scale(1.2);
+}
+
+header form input {
+  border-radius: 1rem;
+  border: 0.1rem solid transparent;
+  padding: 0.5rem;
+  outline: none;
+  transition: transform 0.05s ease-in;
+  padding-left: 1rem;
+}
+
+header form input:focus {
+  border-color: black;
+  transform: scale(1.1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  overflow: auto;
+  place-items: center;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  overflow-y: auto;
+  margin: 0 auto;
+}
+
+.modal-header {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.close {
+  color: white;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: red;
+}
+
+.modal-body {
+  margin-top: 20px;
+}
+
+.modal-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-body li {
+  margin: 10px 0;
+}
+
+.modal-body li button {
+  font-size: 1rem;
+  border: none;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  cursor: pointer;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  margin: 0.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.modal-body li button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.modal-body li button i {
+  margin-right: 8px;
+}
+
+#likeBtn.liked {
+  color: #ff007f;
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  gap: 3rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-container {
+  background-color: grey;
+  width: 20rem;
+  height: 30rem;
+  transition: transform 0.2s ease-in;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+}
+
+.img-container:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.image-popup {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.image-popup-content {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-popup-content img {
+  max-width: 100%;
+  max-height: 60vh;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.close-btn {
+  color: white;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+.image-popup-buttons {
+  margin-top: 1rem;
+}
+
+.popup-btn {
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.popup-btn i {
+  margin-right: 8px;
+}
+
+.popup-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  transform: scale(1.1);
+}
+
+#likeBtn.liked {
+  color: #ff007f;
+}
+
+.load {
+  margin: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    padding: 1.5rem;
+    height: auto;
+  }
+
+  header span {
+    font-size: 1.2rem;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .img-container {
+    width: 15rem;
+    height: 20rem;
+  }
+
+  main {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
+  header span {
+    font-size: 1rem;
+  }
+
+  .img-container {
+    width: 12rem;
+    height: 18rem;
+  }
+
+  .modal-content {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .image-popup-content {
+    width: 85%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.8rem;
+  }
+
+  header span {
+    font-size: 0.9rem;
+  }
+
+  header ul {
+    gap: 1rem;
+  }
+
+  .img-container {
+    width: 10rem;
+    height: 15rem;
+  }
+
+  main {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 0.8rem;
+  }
+
+  .image-popup-content {
+    width: 90%;
+    padding: 0.8rem;
+  }
+
+  .popup-btn {
+    padding: 0.6rem 1.2rem;
+  }
+}
