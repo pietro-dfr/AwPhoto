@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../font.css" />
+    <link rel="stylesheet" href="prices.css" />
+    <title>Pricing Grid</title>
+  </head>
+  <body>
+    <main>
+      <div class="pricing-card">
+        <h1>BASIC</h1>
+        <p class="storage">100<span>GB</span></p>
+        <p class="price"><small>&dollar;1.99/month</small></p>
+        <button onclick="alertAndRedirect()">Purchase</button>
+        <hr />
+        <ul>
+          <li><i class="fas fa-check"></i> High Quality images</li>
+          <li><i class="fas fa-check"></i> No photo customer service</li>
+          <li><i class="fas fa-check"></i> Extra member benefits</li>
+        </ul>
+      </div>
+      <div class="pricing-card">
+        <h1>STANDART</h1>
+        <p class="storage">200<span>GB</span></p>
+        <p class="price"><small>&dollar;3.99/month</small></p>
+        <button onclick="alertAndRedirect()">Purchase</button>
+        <hr />
+        <ul>
+          <li><i class="fas fa-check"></i> FullHD Images</li>
+          <li><i class="fas fa-check"></i> Basic photo customer service</li>
+          <li><i class="fas fa-check"></i> Extra member benefits</li>
+        </ul>
+      </div>
+      <div class="pricing-card">
+        <h1>PREMIUM</h1>
+        <p class="storage">1<span>TB</span></p>
+        <p class="price"><small>&dollar;8.99/month</small></p>
+        <button onclick="alertAndRedirect()">Purchase</button>
+        <hr />
+        <ul>
+          <li><i class="fas fa-check"></i> 4K quality images</li>
+          <li>
+            <i class="fas fa-check"></i> Professional photo cutomer service
+          </li>
+          <li><i class="fas fa-check"></i> Extra member benefits</li>
+        </ul>
+      </div>
+    </main>
+    <script>
+      function alertAndRedirect() {
+        setTimeout(function () {
+          alert("Thank you for your purchase!");
+          window.location.href = "../../index.html";
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>

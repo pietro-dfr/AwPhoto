@@ -1,0 +1,86 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  background-color: #1e293b;
+  color: white;
+  height: 100vh;
+}
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.pricing-card {
+  border: 1rem solid #334155;
+  padding: 2rem;
+  border-radius: 1rem;
+  flex: 1 0 1;
+  text-align: center;
+  transition: transform 0.2s ease-in, border-color 0.3s ease-in-out;
+  background-color: #1e293b;
+}
+.pricing-card:hover {
+  border-color: #7c3aed;
+  transform: scale(1.05);
+}
+.pricing-card h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.pricing-card .storage {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.pricing-card .storage span {
+  font-size: 3rem;
+}
+.price {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+button {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  width: 90%;
+  padding: 1rem;
+  border: 0.1rem solid #7238da;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 1rem;
+  transition: transform 0.1s ease-in, background-color 0.3s ease-in-out;
+}
+button:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+  background-color: #233b61;
+}
+.pricing-card ul {
+  margin: 1rem 0;
+  text-align: left;
+  list-style-type: none;
+}
+.pricing-card ul li {
+  margin-bottom: 1rem;
+}
+hr {
+  border: 1px solid gray;
+}
+button:active {
+  background-color: #233b6194;
+}
+i {
+  padding-right: 0.5rem;
+}
